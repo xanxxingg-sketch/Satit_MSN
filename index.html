@@ -1,79 +1,89 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SATIT_MSN</title>
+    <title>TACHAYA TEPPARAK</title>
     <style>
         body {
-            margin: 0;
+            background: linear-gradient(135deg, #0a0a0a, #3a3a3a);
+            color: #fff;
             font-family: 'Arial', sans-serif;
-            background-color: black;
-            color: #00ff88;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
         h1 {
-            color: cyan;
+            text-align: center;
+            font-size: 50px;
+            text-shadow: 0 0 20px #00ffcc;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border: 5px solid #00ffcc;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        button {
+            background-color: #00ffcc;
+            border: none;
+            color: black;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #009c8c;
         }
         .sidebar {
-            width: 200px;
-            background-color: #222;
-            height: 100vh;
             position: fixed;
-            padding-top: 20px;
-            overflow-y: auto;
+            width: 200px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            box-shadow: 0 0 20px #00ffcc;
         }
         .sidebar a {
-            padding: 10px;
             text-decoration: none;
-            font-size: 18px;
-            color: #00ff88;
+            color: #00ffcc;
+            padding: 10px 15px;
             display: block;
         }
         .sidebar a:hover {
-            background-color: #444;
-        }
-        .content {
-            margin-left: 220px;
-            padding: 20px;
-        }
-        .button {
-            background-color: cyan;
-            border: none;
-            color: black;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #00ff88;
+            background-color: rgba(0, 255, 204, 0.3);
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <a href="#">หน้าแรก</a>
-        <a href="#">นโยบาย</a>
-        <a href="#">ข้อมูลสมาชิก</a>
-        <a href="#">ติดต่อ</a>
+        <a href="#action1">ดูเพิ่มเติม</a>
+        <a href="#action2">ติดต่อเรา</a>
     </div>
-    <div class="content">
-        <header>
-            <h1>✨SATIT_MSN_</h1>
-            <h2>TACHAYA TEPPARAK</h2>
-            <h3>"พรรคประชาธิปไตยเพื่อสาธิต"</h3>
-            <h4>รองประธานสภาพรรคประชาธิปไตร</h4>
-            <a href="#" class="button">ดูเพิ่มเติม</a>
-            <a href="#" class="button">ติดต่อเรา</a>
-        </header>
+    <div class="container">
+        <img class="profile-image" src="profile.jpg" alt="Profile Image">
+        <h1>TACHAYA TEPPARAK</h1>
+        <h2>รองประธานสภาพรรคประชาธิปไตร</h2>
+        <p>พรรคประชาธิปไตยเพื่อสาธิต</p>
+        <button>ดูเพิ่มเติม</button>
+        <button>ติดต่อเรา</button>
     </div>
 </body>
 </html>
